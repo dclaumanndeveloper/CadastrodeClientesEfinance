@@ -1,0 +1,62 @@
+﻿@model IEnumerable<CadastrodeClientes.Models.Cidade>
+
+@{
+    ViewData["Title"] = "Listagem de Cidades";
+}
+
+<h1>Listagem de Cidades</h1>
+
+<p>
+    <a asp-action="Create">Cadastrar</a>
+</p>
+<table class="table">
+    <thead  class="thead-light">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CodigoIBGE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Estado.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ativo)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CodigoIBGE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Estado.Nome)
+            </td>
+            @if (item.Ativo == 'S')
+            {
+                <td style="background-color:lawngreen">
+                    Ativo
+                </td>
+            }
+            else
+            {
+                <td style="background-color:red">
+                    Inativo
+                </td>
+            }
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ID">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.ID">Detalhes</a> |
+                <a asp-action="Delete" asp-route-id="@item.ID">Remover</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
