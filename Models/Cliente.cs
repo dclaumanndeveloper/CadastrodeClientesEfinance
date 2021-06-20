@@ -15,7 +15,7 @@ namespace CadastrodeClientes.Models
         [Display(Name = "Documento de Identificação")]
         public String Documento { get; set; }
         [Display(Name = "Tipo do Documento")]
-        public String TipoDocumento { get; set; }
+        public Enums.TipoDocumento TipoDocumento { get; set; }
         [Display(Name = "Data de Nascimento")]
         [DataType(DataType.Date)]
         public DateTime Nascimento { get; set; }
@@ -31,6 +31,6 @@ namespace CadastrodeClientes.Models
         public String Telefone { get; set; }
         [Display(Name = " Número do Celular")]
         public String Celular { get; set; }
-       
+
     }
 }
