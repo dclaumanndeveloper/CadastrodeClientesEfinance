@@ -23,10 +23,16 @@
             </div>
             <div class="form-group">
                 <label asp-for="Estado" class="control-label"></label>
-                <select asp-for="Estado"
+                <select asp-for="Estado.ID"
                         asp-items="@ViewBag.Estados" class="form-control"></select>
             </div>
+            <div class="form-group" style="display:none;">
+                <label asp-for="Ativo" class="control-label"></label>
+                <input asp-for="Ativo" value="S" class="form-control" />
+                <span asp-validation-for="Ativo" class="text-danger"></span>
+            </div>
             <div class="form-group">
+                <a asp-action="Index">Voltar a listagem</a>
                 <input type="submit" value="Gravar" class="btn btn-primary" />
             </div>
         </form>
@@ -34,7 +40,7 @@
 </div>
 
 <div>
-    <a asp-action="Index">Voltar</a>
+ 
 </div>
 
 @section Scripts {

@@ -15,5 +15,6 @@ namespace CadastrodeClientes.Data
         }
         public DbSet<CadastrodeClientes.Models.Estado> Estado { get; set; }
         public DbSet<CadastrodeClientes.Models.Cidade> Cidade { get; set; }
+        public DbSet<CadastrodeClientes.Models.Cliente> Cliente { get; set; }
     }
 }

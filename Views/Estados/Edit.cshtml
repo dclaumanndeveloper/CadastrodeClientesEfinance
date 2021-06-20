@@ -1,10 +1,10 @@
 ﻿@model CadastrodeClientes.Models.Estado
 
 @{
-    ViewData["Title"] = "Atualizar Cidade";
+    ViewData["Title"] = "Atualizar Estado";
 }
 
-<h1>Atualizar Cidade</h1>
+<h1>Atualizar Estado</h1>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -33,13 +33,10 @@
             </div>
             <div class="form-group">
                 <input type="submit" value="Atualizar" class="btn btn-primary" />
+                <a asp-action="Index">Voltar a listagem</a>
             </div>
         </form>
     </div>
-</div>
-
-<div>
-    <a asp-action="Index">Voltar</a>
 </div>
 
 @section Scripts {

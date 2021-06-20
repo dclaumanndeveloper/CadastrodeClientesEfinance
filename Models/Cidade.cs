@@ -13,8 +13,10 @@ namespace CadastrodeClientes.Models
         [Display(Name = "IBGE")]
         public String CodigoIBGE { get; set; }
         [Display(Name = "Cidade")]
+        [Required(ErrorMessage = " O nome da cidade é um campo obrigatório", AllowEmptyStrings = false)]
         public String Nome { get; set; }
         [Display(Name = "Estado")]
+        [Required(ErrorMessage = " O estado é um campo obrigatório", AllowEmptyStrings = false)]
         public virtual Estado Estado { get; set; }
         [Display(Name = "Status")]
         public char Ativo { get; set; }

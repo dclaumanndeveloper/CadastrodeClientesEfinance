@@ -9,7 +9,13 @@ namespace CadastrodeClientes.Models
     {
         public enum TipoDocumento
         {
-            CPF,CNPJ,RG
+            CPF, CNPJ, RG
+        }
+        public enum Sexo
+        {
+            Masculino,
+            Feminino,
+            Outros
         }
     }
 }
